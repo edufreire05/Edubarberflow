@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101226" />
+  <meta name="description" content="Sistema de agendamentos para barbearias com calendário, clientes e horários disponíveis." />
+  <title>BarberFlow — Gestão de Agendamentos</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="background-scene" aria-hidden="true"><span class="orb orb-a"></span><span class="orb orb-b"></span><span class="orb orb-c"></span><span class="grid-noise"></span></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><rect x="5" y="5" width="38" height="38" rx="13" fill="url(#brandg)"/><path d="m16 15 8 9-8 9M25 15l8 9-8 9" stroke="white" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="brandg" x1="5" y1="5" x2="45" y2="47"><stop stop-color="#9A7BFF"/><stop offset="1" stop-color="#5B63F6"/></linearGradient></defs></svg>
+        </span>
+        <span class="brand-copy"><strong>barber<span>flow</span></strong><small>STUDIO MANAGER</small></span>
+      </div>
+      <div class="side-section-label">MENU PRINCIPAL</div>
+      <nav id="navigation" class="nav-list" aria-label="Navegação principal"></nav>
+      <div class="side-spacer"></div>
+      <div class="sidebar-info"><span class="info-sparkle">✦</span><strong>Seu estúdio, organizado.</strong><p>Agende, acompanhe e encante seus clientes em um só lugar.</p></div>
+      <div class="sidebar-footer"><span class="online-dot"></span> Salvo neste navegador <span class="footer-version">v1.0</span></div>
+    </aside>
+    <div class="mobile-overlay" id="mobile-overlay" data-action="close-menu"></div>
+    <div class="content-area">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-btn mobile-menu" data-action="toggle-menu" aria-label="Abrir menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb-page">Visão geral</strong></div></div>
+        <div class="topbar-actions"><div class="topbar-date" id="topbar-date"></div><button class="btn btn-primary top-new" data-action="new-booking"><span class="plus-sign">+</span><span>Novo agendamento</span></button><div class="user-avatar" title="Administrador">BF</div></div>
+      </header>
+      <main class="main-content" id="app" tabindex="-1"></main>
+      <footer class="app-footer">BARBERFLOW <span>✦</span> FEITO PARA UMA ROTINA MAIS LEVE <span class="footer-right">Modo demonstração · Armazenamento local</span></footer>
+    </div>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+  <input type="file" id="import-file" accept="application/json,.json" hidden />
+  <script src="./app.js" defer></script>
+</body>
+</html>
